@@ -1,19 +1,22 @@
-import { Text, View } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View } from "react-native";
 
-const HomeScreen = () => {
+
+
+export default function HomeScreen(){
   return (
-    <SafeAreaProvider>
-      <SafeAreaView>
-        <View>
-        <Text>Carguita</Text>
-         <Text>Carguita</Text>
-          <Text>Carguita</Text>
-          <Text>PRUEBA 123333</Text>
-        </View>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <View style={styles.container}>
+      <Text>Home
+      </Text>
+    </View>
   );
-};
+}
 
-export default HomeScreen;
+const styles = StyleSheet.create({
+  container: {
+    alignItems:'center',
+    flex: 1, 
+   justifyContent:"center", 
+   
+    
+  },
+})
