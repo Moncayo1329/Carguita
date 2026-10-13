@@ -7,11 +7,15 @@ export default function HomeScreen(){
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>Carguita
+        <Text style={styles.title}>Carguita
         </Text>
-        <Text>
-        Que necesitas transportar? 
-        </Text>
+        <Text style={styles.subtitle}>
+        Que 
+        necesitas transportar? 
+        </Text> 
+        <text> 
+          Encontraras camionetas y caminiones disponibles para al instante. 
+        </text>
       </View>
     </SafeAreaView>
   );
