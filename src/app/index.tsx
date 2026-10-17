@@ -16,7 +16,7 @@ export default function HomeScreen(){
     <View style={styles.inicio}>
       <Text style={styles.inicioText}>Sin registros previos</Text>
       <Text style={styles.iniciobase}>
-        Encuentra flete veloz en Macas  menos de 1 minuto. 
+        Encuentra flete veloz en Macas en  menos de 1 minuto. 
       </Text>
     </View>
 
@@ -35,8 +35,31 @@ export default function HomeScreen(){
       </Text>
       </ImageBackground>
     </View>
+  </View> 
 
-  </View>
+  {/* Seccion de  Servicios*/}  
+
+    <View>
+<View>
+  <Text>Carga general</Text>
+</View>
+<View>
+  <Text>Materiales</Text>
+</View>
+<View>
+  <Text>Muebles</Text>
+</View>
+<View>
+  <Text>Mudanzas</Text>
+</View>
+<View>
+  <Text>Motos</Text>
+</View>
+
+
+
+
+    </View>
 </SafeAreaView>
   );
 }
@@ -57,7 +80,7 @@ const styles = StyleSheet.create({
    width:300,
    height:70,
    padding: 10,
-   marginBottom: 300,
+   marginBottom: 200,
    textAlign:'center',
 
   }, 
@@ -104,7 +127,7 @@ fontFamily:'bold',
     height:150,
     alignSelf:'center',
     position: 'relative',
-     top: -290,
+     top: -190,
      borderRadius: 20,
   overflow: 'hidden',
   backgroundColor: 'rgba(0, 0, 0, 0.2)',
