@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 
 
 
@@ -15,18 +16,24 @@ export default function HomeScreen(){
     <View style={styles.inicio}>
       <Text style={styles.inicioText}>Sin registros previos</Text>
       <Text style={styles.iniciobase}>
-        Encuentra flete veloz en Macas  menos de 1 minuto.
+        Encuentra flete veloz en Macas  menos de 1 minuto. 
       </Text>
     </View>
 
     {/* Sección de pregunta */}
     <View style={styles.preguntaContainer}>
+      <ImageBackground  
+      source={require('@/assets/images/image.png')}
+      resizeMode="cover"
+      style={styles.imageBackground}
+      >
       <Text style={styles.subtitle}>
         ¿Qué necesitas transportar?
       </Text>
       <Text style={styles.descripcion}>
         Encontrarás camionetas y camiones disponibles al instante.
       </Text>
+      </ImageBackground>
     </View>
 
   </View>
@@ -50,7 +57,7 @@ const styles = StyleSheet.create({
    width:300,
    height:70,
    padding: 10,
-   marginBottom: 360,
+   marginBottom: 300,
    textAlign:'center',
 
   }, 
@@ -84,8 +91,33 @@ fontFamily:'bold',
 
   },
   subtitle: {
-    fontSize: 18,
-    color: "#000000",
-    marginTop: 10,
-  }
+    fontSize: 30,
+    color: "#f2efef",
+    fontWeight:'bold',
+    marginTop: 25,
+    marginLeft:15,
+  },
+
+
+  imageBackground: {
+    width:300,
+    height:150,
+    alignSelf:'center',
+    position: 'relative',
+     top: -290,
+     borderRadius: 20,
+  overflow: 'hidden',
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    
+  }, 
+
+
+
+descripcion: {
+  fontSize: 10,
+    color: "#d0cdcd",
+    marginLeft:15,
+    marginTop:5,
+}, 
+  
 })
