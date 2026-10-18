@@ -2,7 +2,14 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
-
+const tiposCarga = [
+  { id: 1, nombre: "Carga general" },
+  { id: 2, nombre: "Materiales" },
+  { id: 3, nombre: "Muebles" },
+  { id: 4, nombre: "Mudanzas" },
+  { id: 5, nombre: "Motos" },
+  { id: 6, nombre: "Puerta a Puerta" }
+];
 
 export default function HomeScreen(){
   return (
@@ -21,7 +28,7 @@ export default function HomeScreen(){
     </View>
 
     {/* Sección de pregunta */}
-    <View style={styles.preguntaContainer}>
+    <View>
       <ImageBackground  
       source={require('@/assets/images/image.png')}
       resizeMode="cover"
@@ -39,27 +46,23 @@ export default function HomeScreen(){
 
   {/* Seccion de  Servicios*/}  
 
-    <View>
-<View>
-  <Text>Carga general</Text>
-</View>
-<View>
-  <Text>Materiales</Text>
-</View>
-<View>
-  <Text>Muebles</Text>
-</View>
-<View>
-  <Text>Mudanzas</Text>
-</View>
-<View>
-  <Text>Motos</Text>
-</View>
-
-
-
-
+    <View style={styles.servicios}>
+      {tiposCarga.map((tipo) => (
+        <View key={tipo.id} style={styles.box}>
+          <Text>{tipo.nombre}</Text>
+        </View>
+      ))}
     </View>
+
+    <View style={styles.inicio}>
+      <Text style={styles.inicioText}>Sin registros previos</Text>
+      <Text style={styles.iniciobase}>
+        Encuentra flete veloz en Macas en  menos de 1 minuto. 
+      </Text>
+    </View>
+
+
+
 </SafeAreaView>
   );
 }
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
    width:300,
    height:70,
    padding: 10,
-   marginBottom: 200,
+   marginBottom: 50,
    textAlign:'center',
 
   }, 
@@ -123,11 +126,11 @@ fontFamily:'bold',
 
 
   imageBackground: {
-    width:300,
+    width:340,
     height:150,
     alignSelf:'center',
     position: 'relative',
-     top: -190,
+     top: -30,
      borderRadius: 20,
   overflow: 'hidden',
   backgroundColor: 'rgba(0, 0, 0, 0.2)',
@@ -142,5 +145,20 @@ descripcion: {
     marginLeft:15,
     marginTop:5,
 }, 
+
+ servicios: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    paddingHorizontal: 15,
+    marginBottom: 25,
+  },
+
+box:{
+ fontSize: 20,
+    fontWeight: 'bold',
+    marginHorizontal: 15,
+    marginBottom: 15,
+},
   
 })
