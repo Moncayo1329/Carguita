@@ -70,13 +70,26 @@ export default function HomeScreen() {
         {/* Sección inferior */}
         <View style={styles.inicio}>
           <Text style={styles.inicioText}>
-            Sin registros previos
+            4 choferes activos
           </Text>
 
           <Text style={styles.iniciobase}>
-            Encuentra flete veloz en Macas en menos de 1 minuto.
+           Buscar transportista
           </Text>
         </View>
+<view>
+<text>
+  Trato directo con el chofer via WhatsApp o llamada telefononica. Sin 
+  intermediarios ni comisiones ocultas. Pagos directos al chofer.
+</text>
+
+
+
+</view>
+
+
+
+
       </ScrollView>
     </SafeAreaView>
   );
