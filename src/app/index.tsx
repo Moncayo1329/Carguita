@@ -12,8 +12,8 @@ const tiposCarga = [
   { id: 2, nombre: "Materiales" },
   { id: 3, nombre: "Muebles" },
   { id: 4, nombre: "Mudanzas" },
-   { id: 5, nombre: "Mudanzas" },
-  { id: 6, nombre: "Mudanzas" },
+  { id: 5, nombre: "Puerta a Puerta" },
+  { id: 6, nombre: "Cosecha agricolas" },
 ];
 
 export default function HomeScreen() {
@@ -77,15 +77,15 @@ export default function HomeScreen() {
            Buscar transportista
           </Text>
         </View>
-<view>
-<text>
+<View>
+<Text>
   Trato directo con el chofer via WhatsApp o llamada telefononica. Sin 
   intermediarios ni comisiones ocultas. Pagos directos al chofer.
-</text>
+</Text>
 
 
 
-</view>
+</View>
 
 
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
 
   title: {
     width: "100%",
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: "bold",
     color: "#000000",
     marginBottom: 25,
@@ -131,13 +131,13 @@ const styles = StyleSheet.create({
   },
 
   inicioText: {
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: "bold",
     textAlign: "center",
   },
 
   iniciobase: {
-    fontSize: 10,
+    fontSize: 12,
     marginTop: 5,
     color: "#8e4107",
     textAlign: "center",
