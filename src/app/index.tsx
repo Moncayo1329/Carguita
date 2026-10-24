@@ -1,4 +1,5 @@
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -6,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import {
   ScrollView
 } from "react-native-gesture-handler";
+
 
 const tiposCarga = [
   { id: 1, nombre: "Carga general" },
@@ -18,14 +20,64 @@ const tiposCarga = [
 
 export default function HomeScreen() {
   return (
+    <> 
+
+    <Stack.Screen
+    options={{
+      headerTitle: () => (
+
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+              {/* Logo */}
+              <Image
+                source={require("@/assets/images/logo.png")}
+                style={{
+                  width: 36,
+                  height: 36,
+                  marginRight: 10,
+                  borderRadius: 8, // opcional
+                }}
+                resizeMode="contain"
+              />
+
+
+        <View>
+      <Text 
+      style={{
+        fontSize:15,
+        fontWeight:"bold",
+        color: "#303030",
+      }}>
+  Carguita 
+      </Text>
+      <Text style={{
+        fontSize:10,
+        color:"#666",
+        marginTop:1,
+      }}>
+
+Transporte local en Macas 
+      </Text>
+        </View>
+        </View>
+      ), 
+    
+      headerShown:true,
+      headerStyle:{
+       elevation:0,
+        shadowOpacity: 0,           // iOS
+      borderBottomWidth: 0,       // por si acaso
+      },
+    }} 
+
+    />
+     
+      
     <SafeAreaView style={styles.safeArea}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.contenido}
         showsVerticalScrollIndicator={true}
       >
-        {/* Título */}
-        <Text style={styles.title}>Carguita</Text>
 
         {/* Información inicial */}
         <View style={styles.inicio}>
@@ -92,6 +144,7 @@ export default function HomeScreen() {
 
       </ScrollView>
     </SafeAreaView>
+    </>
   );
 }
 
