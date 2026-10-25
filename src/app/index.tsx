@@ -1,3 +1,4 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Stack } from "expo-router";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -80,15 +81,26 @@ Transporte local en Macas
       >
 
         {/* Información inicial */}
-        <View style={styles.inicio}>
+        <View> 
+          <View style={styles.inicio}>
+            <View style={styles.inicioFila}>
+               <Ionicons 
+          name="rocket-outline"
+          size={25}
+          color="red"
+          /> 
+       
           <Text style={styles.inicioText}>
-            Sin registros previos
+          Sin registros previos
           </Text>
+       </View>
 
           <Text style={styles.iniciobase}>
-            Encuentra flete veloz en Macas en menos de 1 minuto.
+             Encuentra flete veloz en Macas en menos de 1 minuto.
           </Text>
+          
         </View>
+         </View>
 
         {/* Imagen y pregunta */}
         <ImageBackground
@@ -126,7 +138,10 @@ Transporte local en Macas
           </Text>
 
           <Text style={styles.iniciobase}>
-           Buscar transportista
+           <Ionicons 
+          name="search"
+          size={25}
+          color="orange"/> Buscar transportista
           </Text>
         </View>
 <View>
@@ -177,8 +192,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#ecbc97",
     borderRadius: 10,
     width: "100%",
-    minHeight: 70,
-    padding: 10,
+    minHeight: 80,
+    padding: 18,
     marginBottom: 25,
     justifyContent: "center",
   },
@@ -186,14 +201,17 @@ const styles = StyleSheet.create({
   inicioText: {
     fontSize: 15,
     fontWeight: "bold",
-    textAlign: "center",
+    marginTop:50,
+   
   },
 
   iniciobase: {
     fontSize: 12,
     marginTop: 5,
     color: "#8e4107",
-    textAlign: "center",
+ 
+   
+   
   },
 
   imageBackground: {
