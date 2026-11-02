@@ -84,16 +84,37 @@ Transporte local en Macas
         <View> 
           <View style={styles.inicio}>
             <View style={styles.inicioFila}>
-               <Ionicons 
-          name="rocket-outline"
-          size={25}
-          color="red"
-          /> 
+               
        
-          <Text style={styles.inicioText}>
-          Sin registros previos
-          </Text>
+          <View style={styles.inicioText}>
+            <View style={{
+    width: 45,
+    height: 45,
+    borderRadius: 25,
+    justifyContent: 'center',
+    backgroundColor:'#ad5614',
+    alignItems: 'center',
+    marginTop:-10,
+  }}> 
+         <Ionicons 
+          name="rocket-outline"
+          size={20}
+          color="white"
+          /> </View>
+         
+          <Text 
+          style={{
+            marginLeft:55,
+            marginTop:-50,
+            marginBottom:10,
+            fontSize:15,
+            fontWeight:"bold",
+            color:"#303030",
+          }}> Sin registros previos</Text>
+          </View>
        </View>
+
+
 
           <Text style={styles.iniciobase}>
              Encuentra flete veloz en Macas en menos de 1 minuto.
@@ -140,7 +161,7 @@ Transporte local en Macas
           <Text style={styles.iniciobase}>
            <Ionicons 
           name="search"
-          size={25}
+          size={15}
           color="orange"/> Buscar transportista
           </Text>
         </View>
@@ -192,23 +213,28 @@ const styles = StyleSheet.create({
     backgroundColor: "#ecbc97",
     borderRadius: 10,
     width: "100%",
-    minHeight: 80,
-    padding: 18,
-    marginBottom: 25,
+    padding: 15,
+    paddingVertical: 1,
+    marginBottom: 20,
     justifyContent: "center",
   },
 
   inicioText: {
     fontSize: 15,
     fontWeight: "bold",
-    marginTop:50,
+    marginTop:30,
+    marginBottom:5,
+    
    
   },
 
   iniciobase: {
     fontSize: 12,
-    marginTop: 5,
+    marginTop: -10,
     color: "#8e4107",
+    marginLeft:60,
+    lineHeight:16,
+    paddingBottom:15,
  
    
    
