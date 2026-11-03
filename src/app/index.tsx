@@ -11,12 +11,12 @@ import {
 
 
 const tiposCarga = [
-  { id: 1, nombre: "Carga general" },
-  { id: 2, nombre: "Materiales" },
-  { id: 3, nombre: "Muebles" },
-  { id: 4, nombre: "Mudanzas" },
-  { id: 5, nombre: "Puerta a Puerta" },
-  { id: 6, nombre: "Cosecha agricolas" },
+  { id: 1, nombre: "Carga general", description:"Cajas,bultos y paquetes"},
+  { id: 2, nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
+  { id: 3, nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
+  { id: 4, nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
+   { id: 5, nombre: "Puerta a Puerta", description:"Viajes de ciudad a ciudad" },
+  { id: 6, nombre: "Cosecha agricolas", description:"Plantas, frutas y verduras" },
 ];
 
 export default function HomeScreen() {
