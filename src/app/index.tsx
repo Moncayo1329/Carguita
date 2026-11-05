@@ -10,13 +10,14 @@ import {
 } from "react-native-gesture-handler";
 
 
+
 const tiposCarga = [
-  { id: 1, nombre: "Carga general", description:"Cajas,bultos y paquetes"},
-  { id: 2, nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
-  { id: 3, nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
-  { id: 4, nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
-   { id: 5, nombre: "Puerta a Puerta", description:"Viajes de ciudad a ciudad" },
-  { id: 6, nombre: "Cosecha agricolas", description:"Plantas, frutas y verduras" },
+  { id: 1, icon: "cube-outline", nombre: "Carga general", description:"Cajas,bultos y paquetes" },
+  { id: 2, icon: "bricks", nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
+  { id: 3, icon: "armchair", nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
+  { id: 4, icon: "truck", nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
+   { id: 5, icon: "map-pin", nombre: "Puerta a Puerta", description:"Viajes de ciudad a ciudad" },
+  { id: 6, icon: "sprout", nombre: "Cosecha agricolas", description:"Plantas, frutas y verduras" },
 ];
 
 export default function HomeScreen() {
@@ -145,9 +146,39 @@ Transporte local en Macas
         <View style={styles.servicios}>
           {tiposCarga.map((tipo) => (
             <View key={tipo.id} style={styles.box}>
-              <Text style={styles.boxText}>
-                {tipo.nombre}
-              </Text>
+              <View 
+              style={{
+                width: 35,
+    height: 35,
+    borderRadius: 7,
+    justifyContent: 'center',
+    backgroundColor:'#dee6fa',
+    alignItems: 'center',
+    marginTop:-10,
+    marginLeft:-110,
+              }}> 
+              <Ionicons
+  name={tipo.icon as any}
+  size={20}
+  color="#c1773a"
+/> 
+</View>
+           <View>
+              <Text style={styles.boxText}> 
+                {tipo.nombre} 
+                </Text>
+                </View>
+                 
+                <View
+                style={{
+                  color:"#aea6a6",
+                  fontSize:10,
+                  marginLeft:-10,
+                }}>
+                  <Text>{tipo.description}</Text>
+                </View>
+             
+           
             </View>
           ))}
         </View>
@@ -294,7 +325,8 @@ const styles = StyleSheet.create({
 
   boxText: {
     fontSize: 16,
-    fontWeight: "bold",
     textAlign: "center",
+   
   },
+
 });
