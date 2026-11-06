@@ -16,8 +16,8 @@ const tiposCarga = [
   { id: 2, icon: "bricks", nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
   { id: 3, icon: "armchair", nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
   { id: 4, icon: "truck", nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
-   { id: 5, icon: "map-pin", nombre: "Puerta a Puerta", description:"Viajes de ciudad a ciudad" },
-  { id: 6, icon: "sprout", nombre: "Cosecha agricolas", description:"Plantas, frutas y verduras" },
+   { id: 5, icon: "map-pin", nombre: "Viajes", description:"Viajes de ciudad a ciudad" },
+  { id: 6, icon: "sprout", nombre: "Agricultura", description:"Plantas, frutas y verduras" },
 ];
 
 export default function HomeScreen() {
@@ -163,19 +163,22 @@ Transporte local en Macas
   color="#c1773a"
 /> 
 </View>
-           <View>
+           <View 
+           style={{
+           marginRight:30,
+           marginTop:10,
+           }}>
               <Text style={styles.boxText}> 
                 {tipo.nombre} 
                 </Text>
                 </View>
                  
+
                 <View
                 style={{
-                  color:"#aea6a6",
-                  fontSize:10,
-                  marginLeft:-10,
+                
                 }}>
-                  <Text>{tipo.description}</Text>
+                  <Text style={styles.cuadroDescription}>{tipo.description}</Text>
                 </View>
              
            
@@ -323,10 +326,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
 
+  cuadroDescription: {
+    fontSize: 10,
+    color: "#aea6a6",
+    marginLeft: -10,
+  },
+
   boxText: {
-    fontSize: 16,
-    textAlign: "center",
-   
+    fontSize: 15,
+    fontWeight: "bold",
   },
 
 });
