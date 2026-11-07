@@ -13,11 +13,11 @@ import {
 
 const tiposCarga = [
   { id: 1, icon: "cube-outline", nombre: "Carga general", description:"Cajas,bultos y paquetes" },
-  { id: 2, icon: "bricks", nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
-  { id: 3, icon: "armchair", nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
-  { id: 4, icon: "truck", nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
-   { id: 5, icon: "map-pin", nombre: "Viajes", description:"Viajes de ciudad a ciudad" },
-  { id: 6, icon: "sprout", nombre: "Agricultura", description:"Plantas, frutas y verduras" },
+  { id: 2, icon: "hammer", nombre: "Materiales" , description:"Cementos,arena,bloques, varillas de obras"},
+  { id: 3, icon: "bed-outline", nombre: "Muebles" , description:"Electrodomésticos, muebles y accesorios" },
+  { id: 4, icon: "home-outline", nombre: "Mudanzas", description:"Vivienda completa, oficina o local comercial" }, 
+   { id: 5, icon: "navigate-outline", nombre: "Viajes", description:"Viajes de ciudad a ciudad" },
+  { id: 6, icon: "leaf-outline", nombre: "Agricultura", description:"Plantas, frutas y verduras" },
 ];
 
 export default function HomeScreen() {
@@ -187,18 +187,26 @@ Transporte local en Macas
         </View>
 
         {/* Sección inferior */}
-        <View style={styles.inicio}>
+        <View>
           <Text style={styles.inicioText}>
-            4 choferes activos
+            5 choferes activos
           </Text>
 
-          <Text style={styles.iniciobase}>
+          <Text 
+          style ={{marginLeft:55,
+            marginTop:-50,
+            marginBottom:10,
+            fontSize:15,
+            fontWeight:"bold",
+            color:"#303030"}}  style={styles.iniciobase}>
            <Ionicons 
           name="search"
           size={15}
-          color="orange"/> Buscar transportista
+          color="orange"/> Disponibles en el perimetro de Macas
           </Text>
         </View>
+
+
 <View>
 <Text>
   Trato directo con el chofer via WhatsApp o llamada telefononica. Sin 
@@ -330,6 +338,8 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: "#aea6a6",
     marginLeft: -10,
+    marginTop:5,
+    textAlign: "center",
   },
 
   boxText: {
