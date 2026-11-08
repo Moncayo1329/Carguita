@@ -187,8 +187,16 @@ Transporte local en Macas
         </View>
 
         {/* Sección inferior */}
-        <View>
-          <Text style={styles.inicioText}>
+        <View style={{backgroundColor: "#ecbc97",
+    borderRadius: 10,
+    width: "100%",
+    padding: 15,
+    paddingVertical: 1,
+    marginBottom: 20,
+    justifyContent: "center",
+
+        }}>
+          <Text style={styles.finalText}>
             5 choferes activos
           </Text>
 
@@ -346,5 +354,13 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
   },
+
+  finalText:{
+ fontSize: 15,
+    fontWeight: "bold",
+    marginTop:20,
+    marginBottom:20,
+    textAlign:"center",
+    },
 
 });
