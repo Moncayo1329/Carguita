@@ -157,11 +157,16 @@ Transporte local en Macas
     marginTop:-10,
     marginLeft:-110,
               }}> 
+
+             
               <Ionicons
   name={tipo.icon as any}
   size={20}
   color="#c1773a"
 /> 
+
+
+
 </View>
            <View 
            style={{
@@ -187,6 +192,8 @@ Transporte local en Macas
         </View>
 
         {/* Sección inferior */}
+
+
         <View style={{backgroundColor: "#ecbc97",
     borderRadius: 10,
     width: "100%",
@@ -196,7 +203,14 @@ Transporte local en Macas
     justifyContent: "center",
 
         }}>
-          <Text style={styles.finalText}>
+          <Text style={{
+            marginLeft:55,
+            marginTop:20,
+            marginBottom:10,
+            fontSize:15,
+            fontWeight:"bold",
+            color:"#303030",
+          }}>
             5 choferes activos
           </Text>
 
@@ -207,11 +221,26 @@ Transporte local en Macas
             fontSize:15,
             fontWeight:"bold",
             color:"#303030"}}  style={styles.iniciobase}>
+ </Text>
+
+    <View style={{
+                 width: 45,
+    height: 45,
+    borderRadius: 25,
+    justifyContent: 'center',
+    backgroundColor:'#ad5614',
+    alignItems: 'center',
+    marginTop:-28,
+   
+              }}>
+
            <Ionicons 
           name="search"
           size={15}
-          color="orange"/> Disponibles en el perimetro de Macas
-          </Text>
+          color="orange"/> 
+          </View>
+           <Text>Disponibles en el perimetro de Macas</Text>
+         
         </View>
 
 
